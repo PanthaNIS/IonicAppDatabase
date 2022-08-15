@@ -1,17 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      App Author
     </ion-title>
+    <ion-button (click)="presentAlert()">AppInfo <ion-icon name="information-circle-outline"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">App Author</ion-title>
+      
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <h4>Welcome to my app.</h4>
+    <p>
+      This is Nischal Pantha and I am a student at the Southern Cross University. 
+    </p>
+    <h4>App Guide</h4>
+    <p>
+      The purpose of this app is to manage a veterinary clinic's pet database. This app perform CRUD function which means the user can create, read, update and delete pet records. The user can get the existing pet record through this URL: "http://spike.scu.edu.au:8080/PetServ/" .
+    </p>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  </ion-card>
+
 </ion-content>
