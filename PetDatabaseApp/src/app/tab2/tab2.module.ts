@@ -11,6 +11,7 @@ import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { PetRecordService } from '../pet.service';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   imports: [
     IonicModule,
@@ -20,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [PetRecordService],
   declarations: [Tab2Page],
-  exports:[RouterModule]
+ 
 
 })
 export class Tab2PageModule {}
