@@ -1,17 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Create New Pets Deatils
     </ion-title>
+    <ion-button (click)="presentAlert()">Help</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <!-- Reference: https://ionicframework.com/docs/v3/developer-resources/forms/ and https://ionicframework.com/docs/api/select-option -->
+ <form>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Pet Name</ion-label>
+      <ion-input type="text" name="petname" [(ngModel)]="petname" placeholder="Please Enter Pet Name."required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Pet Species</ion-label>
+      <ion-select type="text" interface="popover" [(ngModel)]="petspecies" placeholder="Please enter Pet Species." >
+        <ion-select-option value="dog">Dog</ion-select-option>
+        <ion-select-option value="cat">Cat</ion-select-option>
+        <ion-select-option value="rabbit">Rabbit</ion-select-option>
+        <ion-select-option value="guinea pig">Guinea Pig</ion-select-option>
+        <ion-select-option value="bird">Bird</ion-select-option>
+        <ion-select-option value="snake">snake</ion-select-option>
+        <ion-select-option value="other">Other</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Pet sex</ion-label>
+      <ion-select interface="popover" [(ngModel)]="petsex" placeholder="Please enter Pet Sex." required>
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="femal">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Pet Age</ion-label>
+      <ion-input type="text" name="petage" [(ngModel)]="petage" placeholder="Please enter Pet Age." required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Owner Phone Number</ion-label>
+      <ion-input type="text" name="Owner" [(ngModel)]="phone" placeholder="Please enter Pet Owner Phone Number." required></ion-input>
+    </ion-item>
+    </ion-list>
+    <ion-button type="submit" color="primary" (click)="addRecord()" >Submit</ion-button>
+    </form>
+  </ion-card>
 </ion-content>
+

@@ -6,12 +6,12 @@ export class PetRecord {
     sex:string;
     phone:string;
    
-    constructor(n: string, a:number, sp:string, s:string, ph:string ) {
-      this.name = n;
-      this.age = a;
-      this.sex= s;
-      this.species=sp;
-      this.phone=ph;
+    constructor(name: string, age:number, species:string, sex:string, phone:string ) {
+      this.name = name;
+      this.age = age;
+      this.sex= sex;
+      this.species=species;
+      this.phone=phone;
 
       
     }

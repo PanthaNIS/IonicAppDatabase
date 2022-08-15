@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 // import { AlertController } from 'ionic-angular';
 import { AlertController } from '@ionic/angular';
 import{HttpClient} from '@angular/common/http';
-import{PetRecordService} from '../Pet.Record';
+import{PetRecordService} from '../pet.service';
 
 
 @Component({
@@ -12,7 +12,11 @@ import{PetRecordService} from '../Pet.Record';
 })
 export class Tab2Page {
   petRecords: string;
+  errorMessage : string = "";
+
+
 // Reference: https://ionicframework.com/docs/api/alert
+
   constructor(private alertController: AlertController, private petrecord: PetRecordService) {}
 
   async presentAlert() {
@@ -25,9 +29,9 @@ export class Tab2Page {
 
     await alert.present();
   }
-
+// Reference: unit content HTTP,AJAX and REST page.
   getPetRecords(){
-    this.petrecord.getData().subscribe((data:any)=> {
+    this.petrecord.getAllData().subscribe((data:any)=> {
       this.petRecords = JSON.stringify(data);
     }
     );

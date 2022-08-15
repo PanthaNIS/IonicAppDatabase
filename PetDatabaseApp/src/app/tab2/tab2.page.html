@@ -3,7 +3,7 @@
     <ion-title>
       Pet Records
     </ion-title>
-    <ion-button (click)="presentAlert()">PetInfo <ion-icon name="information-circle-outline"></ion-icon></ion-button>
+    <ion-button (click)="presentAlert()">Help</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -13,6 +13,10 @@
       <ion-card-content>
         <h4>Hey User you can see the pet deatils by clicking the button below.</h4>
         <ion-button class="nis" (click) = "getPetRecords()"> Pet Details</ion-button>
+        <p>
+          {{petRecords}}
+        </p>
+        <p>{{errorMessage}}</p>
       </ion-card-content>
     </ion-card>
   </ion-content>

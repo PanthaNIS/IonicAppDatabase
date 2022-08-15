@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 // import { AlertController } from 'ionic-angular';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',

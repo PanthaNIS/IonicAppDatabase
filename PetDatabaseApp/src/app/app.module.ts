@@ -7,7 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // adding the PetRecordService to the app.module.ts file
-import { PetRecordService } from './Pet.record';
+import { PetRecordService } from './pet.service';
 
 @NgModule({
   declarations: [AppComponent],
