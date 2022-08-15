@@ -1,17 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Pet Records
     </ion-title>
+    <ion-button (click)="presentAlert()">PetInfo <ion-icon name="information-circle-outline"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content>
+    <ion-card>
+      <ion-card-content>
+        <h4>Hey User you can see the pet deatils by clicking the button below.</h4>
+        <ion-button class="nis" (click) = "getPetRecords()"> Pet Details</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  
 </ion-content>
